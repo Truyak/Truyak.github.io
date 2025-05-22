@@ -3,6 +3,7 @@
 ## Birinci Sorgu
 -ilk bölümde oyunu anlatan bir yazı olmasını istiyorum. "Yeşil olan çantalar yem'dir. Onları yiyip büyürsün ve ateş edebilirsin. Basınç plakasına gelip ateş etmeyi dene ve sihri gör" tarzında bir yazıyı ilk bölümde yazdırabilir miyiz? Kontrolleri ise sadece ilk 2 bölümde gösterelim. diğer bölümlerde sadece level sayısı yazsın.
 kodum:
+```
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -1372,11 +1373,11 @@ kodum:
   </script>
 </body>
 </html>
-
+```
 
 -İşte oyunun ilk bölümünde oyun mekaniklerini anlatan bir yazı eklediğim kodunuz:
 
-html
+```
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -2090,7 +2091,8 @@ html
                 newFoodY = wall.y - food.h;
                 food.vy = 0;
                 food.vx *= friction;
-               
+
+```
 ## İkinci Sorgu
 -1 saniye kodun beklemesini istiyorum o gecikmeyi nasıl yaşatabilirim
 
@@ -2098,14 +2100,15 @@ html
 JavaScript'te kodunuzun 1 saniye beklemesini sağlamak için birkaç farklı yöntem kullanabilirsiniz. İşte en yaygın ve uygun çözümler:
 
 1. setTimeout Kullanarak
-javascript
+```
 console.log("Bekleme başlıyor...");
 setTimeout(() => {
   console.log("1 saniye sonra bu mesaj görünecek");
   // Burada bekledikten sonra yapılacak işlemler
 }, 1000); // 1000 milisaniye = 1 saniye
+```
 2. async/await ile Promise Kullanarak (Modern Yöntem)
-javascript
+```
 function delay(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
@@ -2116,12 +2119,11 @@ async function myFunction() {
   console.log("1 saniye sonra bu mesaj görünecek");
   // Burada bekledikten sonra yapılacak işlemler
 }
-
+```
 myFunction();
 3. Oyun Döngüsüne Uyarlanmış Örnek
 Oyun döngünüzde 1 saniye bekleme eklemek için:
-
-javascript
+```
 let waitStartTime = 0;
 let isWaiting = false;
 
@@ -2147,10 +2149,11 @@ function startWaiting() {
 
 // Kullanım örneği:
 startWaiting(); // 1 saniye beklemeyi başlat
+```
 4. Özel Durum: Oyununuzda Belirli Bir Animasyon İçin Bekleme
 Eğer belirli bir animasyon için 1 saniye beklemek istiyorsanız:
 
-javascript
+```
 let animationPauseTime = 0;
 
 function update() {
@@ -2169,6 +2172,7 @@ function update() {
 function pauseAnimation() {
   animationPauseTime = performance.now() + 1000;
 }
+```
 Önemli Notlar:
 JavaScript'te sleep() gibi direkt bekleme fonksiyonları yoktur, bu yüzden yukarıdaki yöntemler kullanılır.
 
@@ -2185,30 +2189,29 @@ Hangi yöntemi seçeceğiniz, kodunuzun yapısına ve ne yapmaya çalıştığı
 Karakterin geri tepme (recoil) miktarını artırmak için player.recoil değerini artırabiliriz. Şu anda bu değer 3 olarak ayarlanmış. Daha fazla tepki hissetmek için bu değeri 5 veya 6 gibi daha yüksek bir değere çıkarabiliriz.
 
 -İşte değiştirilmiş kod parçası:
-
-javascript
+```
 let player = {
   // ... diğer özellikler aynı
   recoil: 6, // 3 yerine 6 yaptık (2 kat daha güçlü tepki)
   foodCount: 0
 };
+```
 Bu değişiklik, karakterin ateş ettiğinde daha fazla geri tepmesini sağlayacaktır. Eğer bu hala yeterli gelmezse, değeri 8 veya 10 gibi daha yüksek bir sayıya çıkarabilirsiniz.
 
 Ayrıca, geri tepmenin daha dramatik olmasını isterseniz, hem yatay hem de dikey tepkiyi artırabiliriz. Bunun için fireGoo fonksiyonundaki geri tepme kuvvetini değiştirebiliriz:
-
-javascript
+```
 function fireGoo(e) {
   // ... önceki kod aynı
   player.vx -= (dx / mag) * player.recoil * 1.5; // 1.5 kat daha fazla yatay tepki
   player.vy -= (dy / mag) * player.recoil * 1.5; // 1.5 kat daha fazla dikey tepki
   // ... sonraki kod aynı
 }
+```
 Bu değişikliklerle birlikte karakteriniz ateş ettiğinde çok daha belirgin bir şekilde geri tepecektir. Değerleri deneyerek istediğiniz hissi yakalayana kadar ayarlayabilirsiniz.
 
 Recoil değerini değiştirmek tam da beklediğim değişiklikti teşekkür ederim fakat anlamadığım bir nokta var player.vx için ne yaparsam yapayım bir türlü yatay geri tepmeyi kazanamıyorum yatay olarak hep aynı yerinde kalmaya devam ediyor
 Yatay geri tepme (recoil) sorununuzun nedeni muhtemelen update() fonksiyonunda her frame'de player.vx değerini sıfırlamanızdan kaynaklanıyor. Şu anda kodunuzda:
-
-javascript
+```
 function update() {
   // Hareket
   player.vx = 0; // <-- Bu satır her frame'de vx'i sıfırlıyor
@@ -2218,6 +2221,7 @@ function update() {
   
   // ... diğer kodlar
 }
+```
 Bu, ateş ettiğinizde uygulanan geri tepme kuvvetinin hemen sıfırlanmasına neden oluyor. Çözüm olarak şu değişiklikleri yapabiliriz:
 
 player.vx = 0 satırını kaldırın veya değiştirin
@@ -2225,8 +2229,7 @@ player.vx = 0 satırını kaldırın veya değiştirin
 Hareket girdilerini player.vx'e ekleyin (üzerine yazmak yerine)
 
 İşte düzeltilmiş kod:
-
-javascript
+```
 function update() {
   // Hareket - vx'i sıfırlamak yerine hareket inputlarını ekliyoruz
   const moveSpeed = player.grounded ? player.speed : player.airSpeed;
@@ -2237,9 +2240,9 @@ function update() {
   
   // ... diğer kodlar aynı
 }
+```
 Veya daha iyi bir alternatif - geri tepmeyi korumak için:
-
-javascript
+```
 function update() {
   // Hareket - vx'i sıfırlamıyoruz, sadece inputları uyguluyoruz
   const moveSpeed = player.grounded ? player.speed : player.airSpeed;
@@ -2251,15 +2254,16 @@ function update() {
   
   // ... diğer kodlar aynı
 }
+```
 Ayrıca, fireGoo() fonksiyonundaki geri tepme kuvvetini de artırabilirsiniz:
-
-javascript
+```
 function fireGoo(e) {
   // ... önceki kodlar
   player.vx -= (dx / mag) * player.recoil * 2; // 2 kat daha güçlü yatay tepki
   player.vy -= (dy / mag) * player.recoil;
   // ... sonraki kodlar
 }
+```
 Bu değişikliklerle birlikte:
 
 Geri tepme kuvveti artık frame başında sıfırlanmayacak
@@ -2277,8 +2281,7 @@ Eğer hala yeterli gelmezse, player.recoil değerini daha da artırabilir (örne
 İşte düzeltilmiş kod parçaları:
 
 loadLevel fonksiyonunda yemlerin başlangıç pozisyonlarını kontrol eden kısmı güncelleyin:
-
-javascript
+```
 function loadLevel(level) {
   // ... diğer kodlar aynı
 
@@ -2300,9 +2303,9 @@ function loadLevel(level) {
   
   // ... diğer kodlar aynı
 }
+```
 update fonksiyonunda yemlerin basınç plakalarıyla etkileşimini düzelten kısmı güncelleyin:
-
-javascript
+```
 // Yem fiziksel güncelleme ve pressure plate kontrolü
 if (foods) {
   for (let food of foods) {
@@ -2329,9 +2332,9 @@ if (foods) {
     }
   }
 }
+```
 Ayrıca, 5. seviyenin tanımında basınç plakasının konumunu biraz daha ayarlayabiliriz:
-
-javascript
+```
 5: {
   // ... diğer tanımlar aynı
   pressurePlates: [
@@ -2339,6 +2342,7 @@ javascript
   ],
   // ... diğer tanımlar aynı
 }
+```
 Bu değişikliklerle:
 
 Yemler başlangıçta basınç plakalarının üzerindeyse plakayı aktif hale getirecek
@@ -2352,8 +2356,7 @@ seviyede yem (yeşil küp) başlangıçta plakanın üzerine düşecek ve plakay
 -yemleri herhangi bir duvarın tam üstünde dururken ateş edersem (tam altıma, duvara doğru olacak şekilde) yemler duvarın içine giriyor hata oluyor.
 
 -Yemlerin duvarların içine girmesini engellemek için fireGoo fonksiyonunu ve goo çarpışma kontrolünü güncelleyeceğim. İşte düzeltilmiş kod:
-
-javascript
+```
 function fireGoo(e) {
   if (player.color !== 'green' || player.foodCount <= 0) {
     return;
@@ -2445,9 +2448,9 @@ function fireGoo(e) {
     player.h = 30;
   }
 }
+```
 Ayrıca, goo'ların güncellenmesi sırasında duvar çarpışma kontrolünü de iyileştirmeliyiz:
-
-javascript
+```
 // Goo hareketi ve çarpışma kontrolü
 for (let i = goos.length - 1; i >= 0; i--) {
   let goo = goos[i];
@@ -2498,6 +2501,7 @@ for (let i = goos.length - 1; i >= 0; i--) {
 
   // ... diğer çarpışma kontrolleri (platformlar vs.)
 }
+```
 Bu değişikliklerle:
 
 Yemler duvara doğru ateş edildiğinde, rastgele küçük bir açıyla yön değiştirecek
