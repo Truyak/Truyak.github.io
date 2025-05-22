@@ -8,11 +8,13 @@ Bu README dosyası, oyunun nasıl çalıştığını, kurulum adımlarını, oyn
 - [Oyun Hakkında](#oyun-hakkında)
 - [Oynanış Mekanikleri](#oynanış-mekanikleri)
 - [Kurulum ve Çalıştırma](#kurulum-ve-çalıştırma)
+- [Oynanış Videosu](#oynanış-videosu)
 - [Seviyeler](#seviyeler)
 - [Ekran Görüntüleri](#ekran-görüntüleri)
 - [Kullanılan Teknolojiler](#kullanılan-teknolojiler)
 - [Geliştirme Notları](#geliştirme-notları)
 - [Katkıda Bulunma](#katkıda-bulunma)
+- [Kullanılan Kaynaklar](#kullanılan-kaynaklar)
 - [Lisans](#lisans)
 
 ## Oyun Hakkında
@@ -37,63 +39,29 @@ Oyunda kullanılan temel mekanikler şunlardır:
   - Tüm seviyeler tamamlandığında bir "Tebrikler" ekranı görüntülenir ve oyun yeniden başlatılabilir.
 - **Kontroller**:
   - `R`: Seviyeyi yeniden başlatır.
-  - `P`: Bir önceki seviyeye döner.
-  - `M`: Bir sonraki seviyeye geçer (hızlı test için).
 
 ## Kurulum ve Çalıştırma
 Oyunu çalıştırmak için aşağıdaki adımları izleyin:
 
-1. **Depoyu Klonlayın veya Dosyaları İndirin**:
+1. **Oyunu tarayıcıda açın**:
+   ```
+   https://truyak.github.io
+   ```
+   
+
+2. **Depoyu Klonlayın veya Dosyaları İndirin**:
    ```
    git clone <repo-url>
    ```
    veya projeyi bir ZIP dosyası olarak indirip çıkarın.
 
-2. **Gerekli Dosya Yapısını Oluşturun**:
-   Proje, aşağıdaki gibi bir dosya yapısına ihtiyaç duyar:
-   ```
-   getting-goopy/
-   ├── index.html
-   ├── assets/
-   │   ├── images/
-   │   │   ├── player.png
-   │   │   ├── player_green.png
-   │   │   ├── food.png
-   │   │   ├── goo.png
-   │   │   ├── platform.png
-   │   │   ├── moving_platform.png
-   │   │   ├── brick.png
-   │   │   ├── hazard_wall.png
-   │   │   ├── pressure_plate_red.png
-   │   │   ├── colored_wall_red.png
-   │   │   ├── (ve diğer görseller)
-   │   │   └── animations/
-   │   │       ├── RightWalkingAnimation.png
-   │   │       ├── LeftWalkingAnimation.png
-   │   │       └── (ve diğer animasyon görselleri)
-   │   └── sounds/
-   │       ├── bgm.mp3
-   │       ├── jump.mp3
-   │       ├── fire.mp3
-   │       ├── (ve diğer ses dosyaları)
-   ```
-
-3. **Bir Web Sunucusu Kullanın**:
-   Oyunun asset'leri (görseller ve sesler) yükleyebilmesi için bir web sunucusu gereklidir. Yerel bir sunucu başlatmak için aşağıdaki yöntemlerden birini kullanabilirsiniz:
-   - **Python ile**:
-     ```
-     python -m http.server 8000
-     ```
-   - **Node.js ile (`live-server` kullanarak)**:
-     ```
-     npm install -g live-server
-     live-server
-     ```
-
-4. **Oyunu Tarayıcıda Açın**:
-   Tarayıcınızda `http://localhost:8000` (veya sunucunun kullandığı port) adresine giderek oyunu başlatabilirsiniz.
-
 **Not**: Oyunun düzgün çalışması için tüm görsel ve ses dosyalarının `assets` klasöründe doğru şekilde yerleştirildiğinden emin olun. Eksik asset'ler konsolda uyarı mesajları oluşturabilir, ancak oyun bu durumda çalışmaya devam eder (fallback mekanizmaları mevcuttur).
+
+## Oynanış Videosu
+Oynanış videosuna alttaki linkten erişebilirsiniz.
+ ```
+  https://www.youtube.com/watch?v=uQNb9vF11Ig
+ ```
 
 ## Seviyeler
 Oyun toplamda 5 seviyeden oluşur. Her seviye, farklı bir harita tasarımı ve görevlerle oyunculara meydan okur:
@@ -109,17 +77,17 @@ Oyun toplamda 5 seviyeden oluşur. Her seviye, farklı bir harita tasarımı ve 
 ### Yükleme Ekranı
 Oyun başladığında, oyuncuları şık bir yükleme ekranı karşılar. Yükleme çubuğu ve "Getting GOOpy" başlığı, oyunun temasına uygun bir şekilde tasarlanmıştır.
 
-![Yükleme Ekranı](path/to/loading-screen.png)
+![Yükleme Ekranı](assets/images/LoadingScreen.png)
 
 ### Seviye 1
 Seviye 1, oyunculara temel mekanikleri öğreten bir giriş seviyesidir. Yeşil çantaları toplayarak karakterin büyümesi ve ateş etme yeteneği kazanması bu seviyede tanıtılır.
 
-![Seviye 1](path/to/level1.png)
+![Seviye 1](assets/images/Level1.png)
 
 ### Seviye 5
 Seviye 5, oyunun en zorlu seviyesidir. Hareketli platformlar, tehlikeli duvarlar ve stratejik ateş etme gerektiren mekanikler içerir. Oyuncuların tüm öğrendiklerini uygulaması gerekir.
 
-![Seviye 5](path/to/level5.png)
+![Seviye 5](assets/images/Level5.png)
 
 ## Kullanılan Teknolojiler
 - **HTML5 Canvas**: Oyunun grafiklerinin çizilmesi ve animasyonların oluşturulması için kullanıldı.
@@ -139,13 +107,36 @@ Seviye 5, oyunun en zorlu seviyesidir. Hareketli platformlar, tehlikeli duvarlar
 
 ## Katkıda Bulunma
 Projeye katkıda bulunmak isterseniz, aşağıdaki adımları izleyebilirsiniz:
-1. Depoyu fork edin.
+1. Repoyu fork edin.
 2. Yeni bir branch oluşturun (`git checkout -b feature/yeni-ozellik`).
 3. Değişikliklerinizi yapın ve commit edin (`git commit -m "Yeni özellik eklendi"`).
 4. Branch'inizi push edin (`git push origin feature/yeni-ozellik`).
 5. Bir Pull Request açın.
 
 Her türlü öneri, hata raporu veya yeni özellik talebi için Issues sekmesini kullanabilirsiniz.
+
+## Kullanılan Kaynaklar
+
+### 🖼️ Görsel Assetler
+- [8-bit Brick Wall Texture](https://img.freepik.com/premium-vector/brick-wall-pixel-art-8bit-texture-brick-stone-wall-game-bricks-pixelated-game-design_709240-240.jpg)  
+- [Lava Texture (Reddit)](https://www.reddit.com/media?url=https%3A%2F%2Fpreview.redd.it%2Flava-texture-v0-drrivui2jgye1.png%3Fwidth%3D1080%26crop%3Dsmart%26auto%3Dwebp%26s%3D0d1d4ea3057b5cf4e92f40aec7f59d4911769b91)  
+- [Fantasy Castle Pixel Art](https://images.wallpapersden.com/image/download/fantasy-castle-pixel-art_bW1uaWuUmZqaraWkpJRmbmdlrWZlbWY.jpg)  
+- [Character Sprite](https://img.itch.zone/aW1nLzQ1MzE4MzEucG5n/original/6MG0aX.png)  
+- [OpenGameArt Background](https://opengameart.org/sites/default/files/2304x1296.png)  
+- [Hand-Painted Village](https://notslot.com/products/2d-hand-painted/village/gallery/village-1.jpg)  
+- [UI Assets](https://img.itch.zone/aW1nLzEyMTkxMTQwLnBuZw==/original/ALYiiE.png)  
+
+### 🔊 Ses Efektleri & Müzik
+- [Fire Sound Effect](https://freesound.org/people/MentosLat/sounds/417486/)  
+- [Jump Sound](https://freesound.org/people/lgarrett/sounds/17150/)  
+- [Pixel Music](https://freesound.org/people/LittleRobotSoundFactory/sounds/270330/)  
+- [Retro SFX](https://freesound.org/people/EVRetro/sounds/495002/)  
+- [Ambient Sound](https://freesound.org/people/pekena_larva/sounds/667291/)  
+- [8-bit Music (YouTube)](https://www.youtube.com/watch?v=Y7xTCAq46CY)  
+
+### ✨ Özel Assetler
+Oyun içindeki diğer tüm görsel/ses assetleri tarafımdan özel olarak tasarlanmıştır.
+
 
 ## Lisans
 Bu proje [MIT Lisansı](LICENSE) altında lisanslanmıştır. Daha fazla bilgi için `LICENSE` dosyasını inceleyebilirsiniz.
