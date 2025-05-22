@@ -43,55 +43,17 @@ Oyunda kullanılan temel mekanikler şunlardır:
 ## Kurulum ve Çalıştırma
 Oyunu çalıştırmak için aşağıdaki adımları izleyin:
 
-1. **Depoyu Klonlayın veya Dosyaları İndirin**:
+1. **Oyunu tarayıcıda açın**:
+   ```
+   https://truyak.github.io
+   ```
+   
+
+2. **Depoyu Klonlayın veya Dosyaları İndirin**:
    ```
    git clone <repo-url>
    ```
    veya projeyi bir ZIP dosyası olarak indirip çıkarın.
-
-2. **Gerekli Dosya Yapısını Oluşturun**:
-   Proje, aşağıdaki gibi bir dosya yapısına ihtiyaç duyar:
-   ```
-   getting-goopy/
-   ├── index.html
-   ├── assets/
-   │   ├── images/
-   │   │   ├── player.png
-   │   │   ├── player_green.png
-   │   │   ├── food.png
-   │   │   ├── goo.png
-   │   │   ├── platform.png
-   │   │   ├── moving_platform.png
-   │   │   ├── brick.png
-   │   │   ├── hazard_wall.png
-   │   │   ├── pressure_plate_red.png
-   │   │   ├── colored_wall_red.png
-   │   │   ├── (ve diğer görseller)
-   │   │   └── animations/
-   │   │       ├── RightWalkingAnimation.png
-   │   │       ├── LeftWalkingAnimation.png
-   │   │       └── (ve diğer animasyon görselleri)
-   │   └── sounds/
-   │       ├── bgm.mp3
-   │       ├── jump.mp3
-   │       ├── fire.mp3
-   │       ├── (ve diğer ses dosyaları)
-   ```
-
-3. **Bir Web Sunucusu Kullanın**:
-   Oyunun asset'leri (görseller ve sesler) yükleyebilmesi için bir web sunucusu gereklidir. Yerel bir sunucu başlatmak için aşağıdaki yöntemlerden birini kullanabilirsiniz:
-   - **Python ile**:
-     ```
-     python -m http.server 8000
-     ```
-   - **Node.js ile (`live-server` kullanarak)**:
-     ```
-     npm install -g live-server
-     live-server
-     ```
-
-4. **Oyunu Tarayıcıda Açın**:
-   Tarayıcınızda `http://localhost:8000` (veya sunucunun kullandığı port) adresine giderek oyunu başlatabilirsiniz.
 
 **Not**: Oyunun düzgün çalışması için tüm görsel ve ses dosyalarının `assets` klasöründe doğru şekilde yerleştirildiğinden emin olun. Eksik asset'ler konsolda uyarı mesajları oluşturabilir, ancak oyun bu durumda çalışmaya devam eder (fallback mekanizmaları mevcuttur).
 
