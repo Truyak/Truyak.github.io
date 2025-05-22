@@ -37,8 +37,6 @@ Oyunda kullanılan temel mekanikler şunlardır:
   - Tüm seviyeler tamamlandığında bir "Tebrikler" ekranı görüntülenir ve oyun yeniden başlatılabilir.
 - **Kontroller**:
   - `R`: Seviyeyi yeniden başlatır.
-  - `P`: Bir önceki seviyeye döner.
-  - `M`: Bir sonraki seviyeye geçer (hızlı test için).
 
 ## Kurulum ve Çalıştırma
 Oyunu çalıştırmak için aşağıdaki adımları izleyin:
@@ -101,7 +99,7 @@ Seviye 5, oyunun en zorlu seviyesidir. Hareketli platformlar, tehlikeli duvarlar
 
 ## Katkıda Bulunma
 Projeye katkıda bulunmak isterseniz, aşağıdaki adımları izleyebilirsiniz:
-1. Depoyu fork edin.
+1. Repoyu fork edin.
 2. Yeni bir branch oluşturun (`git checkout -b feature/yeni-ozellik`).
 3. Değişikliklerinizi yapın ve commit edin (`git commit -m "Yeni özellik eklendi"`).
 4. Branch'inizi push edin (`git push origin feature/yeni-ozellik`).
