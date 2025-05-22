@@ -14,6 +14,7 @@ Bu README dosyası, oyunun nasıl çalıştığını, kurulum adımlarını, oyn
 - [Kullanılan Teknolojiler](#kullanılan-teknolojiler)
 - [Geliştirme Notları](#geliştirme-notları)
 - [Katkıda Bulunma](#katkıda-bulunma)
+- [Kullanılan Kaynaklar](#kullanılan-kaynaklar)
 - [Lisans](#lisans)
 
 ## Oyun Hakkında
@@ -113,6 +114,29 @@ Projeye katkıda bulunmak isterseniz, aşağıdaki adımları izleyebilirsiniz:
 5. Bir Pull Request açın.
 
 Her türlü öneri, hata raporu veya yeni özellik talebi için Issues sekmesini kullanabilirsiniz.
+
+## Kullanılan Kaynaklar
+
+### 🖼️ Görsel Assetler
+- [8-bit Brick Wall Texture](https://img.freepik.com/premium-vector/brick-wall-pixel-art-8bit-texture-brick-stone-wall-game-bricks-pixelated-game-design_709240-240.jpg)  
+- [Lava Texture (Reddit)](https://www.reddit.com/media?url=https%3A%2F%2Fpreview.redd.it%2Flava-texture-v0-drrivui2jgye1.png%3Fwidth%3D1080%26crop%3Dsmart%26auto%3Dwebp%26s%3D0d1d4ea3057b5cf4e92f40aec7f59d4911769b91)  
+- [Fantasy Castle Pixel Art](https://images.wallpapersden.com/image/download/fantasy-castle-pixel-art_bW1uaWuUmZqaraWkpJRmbmdlrWZlbWY.jpg)  
+- [Character Sprite](https://img.itch.zone/aW1nLzQ1MzE4MzEucG5n/original/6MG0aX.png)  
+- [OpenGameArt Background](https://opengameart.org/sites/default/files/2304x1296.png)  
+- [Hand-Painted Village](https://notslot.com/products/2d-hand-painted/village/gallery/village-1.jpg)  
+- [UI Assets](https://img.itch.zone/aW1nLzEyMTkxMTQwLnBuZw==/original/ALYiiE.png)  
+
+### 🔊 Ses Efektleri & Müzik
+- [Fire Sound Effect](https://freesound.org/people/MentosLat/sounds/417486/)  
+- [Jump Sound](https://freesound.org/people/lgarrett/sounds/17150/)  
+- [Pixel Music](https://freesound.org/people/LittleRobotSoundFactory/sounds/270330/)  
+- [Retro SFX](https://freesound.org/people/EVRetro/sounds/495002/)  
+- [Ambient Sound](https://freesound.org/people/pekena_larva/sounds/667291/)  
+- [8-bit Music (YouTube)](https://www.youtube.com/watch?v=Y7xTCAq46CY)  
+
+### ✨ Özel Assetler
+Oyun içindeki diğer tüm görsel/ses assetleri tarafımdan özel olarak tasarlanmıştır.
+
 
 ## Lisans
 Bu proje [MIT Lisansı](LICENSE) altında lisanslanmıştır. Daha fazla bilgi için `LICENSE` dosyasını inceleyebilirsiniz.
