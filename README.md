@@ -8,6 +8,7 @@ Bu README dosyası, oyunun nasıl çalıştığını, kurulum adımlarını, oyn
 - [Oyun Hakkında](#oyun-hakkında)
 - [Oynanış Mekanikleri](#oynanış-mekanikleri)
 - [Kurulum ve Çalıştırma](#kurulum-ve-çalıştırma)
+- [Oynanış Videosu](#oynanış-videosu)
 - [Seviyeler](#seviyeler)
 - [Ekran Görüntüleri](#ekran-görüntüleri)
 - [Kullanılan Teknolojiler](#kullanılan-teknolojiler)
@@ -54,6 +55,12 @@ Oyunu çalıştırmak için aşağıdaki adımları izleyin:
    veya projeyi bir ZIP dosyası olarak indirip çıkarın.
 
 **Not**: Oyunun düzgün çalışması için tüm görsel ve ses dosyalarının `assets` klasöründe doğru şekilde yerleştirildiğinden emin olun. Eksik asset'ler konsolda uyarı mesajları oluşturabilir, ancak oyun bu durumda çalışmaya devam eder (fallback mekanizmaları mevcuttur).
+
+## Oynanış Videosu
+Oynanış videosuna alttaki linkten erişebilirsiniz.
+ ```
+  https://www.youtube.com/watch?v=uQNb9vF11Ig
+ ```
 
 ## Seviyeler
 Oyun toplamda 5 seviyeden oluşur. Her seviye, farklı bir harita tasarımı ve görevlerle oyunculara meydan okur:
