@@ -76,12 +76,12 @@ Oyun başladığında, oyuncuları şık bir yükleme ekranı karşılar. Yükle
 ### Seviye 1
 Seviye 1, oyunculara temel mekanikleri öğreten bir giriş seviyesidir. Yeşil çantaları toplayarak karakterin büyümesi ve ateş etme yeteneği kazanması bu seviyede tanıtılır.
 
-![Seviye 1](assets/images/level1.png)
+![Seviye 1](assets/images/Level1.png)
 
 ### Seviye 5
 Seviye 5, oyunun en zorlu seviyesidir. Hareketli platformlar, tehlikeli duvarlar ve stratejik ateş etme gerektiren mekanikler içerir. Oyuncuların tüm öğrendiklerini uygulaması gerekir.
 
-![Seviye 5](assets/images/level5.png)
+![Seviye 5](assets/images/Level5.png)
 
 ## Kullanılan Teknolojiler
 - **HTML5 Canvas**: Oyunun grafiklerinin çizilmesi ve animasyonların oluşturulması için kullanıldı.
