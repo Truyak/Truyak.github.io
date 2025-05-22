@@ -1,5 +1,8 @@
 # Getting GOOpy - 2D Platform Oyunu
 
+Oyunun gerçek adı: **Getting Goopy**
+Bağlantı linki ise ``` https://siivergoid.itch.io/getting-goopy ```
+
 **Getting GOOpy**, HTML5 Canvas ve JavaScript kullanılarak geliştirilmiş, eğlenceli bir 2D platform oyunudur. Oyuncular, sevimli bir karakteri kontrol ederek farklı seviyelerde ilerler, yemleri toplar, engelleri aşar ve hedeflere ulaşmaya çalışır. Oyun, fiziksel mekanikler, animasyonlar ve ses efektleriyle zenginleştirilmiştir. Toplamda 5 seviye bulunan bu oyun, hem eğlenceli hem de zorlayıcı bir deneyim sunar.
 
 Bu README dosyası, oyunun nasıl çalıştığını, kurulum adımlarını, oynanış mekaniklerini ve geliştirme sürecinde kullanılan teknolojileri detaylı bir şekilde açıklamaktadır.
