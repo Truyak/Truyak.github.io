@@ -615,18 +615,6 @@
       if (e.key === 'r' || e.key === 'R') {
         loadLevel(currentLevel);
       }
-      if (e.key === 'p' || e.key === 'P') {
-        if (currentLevel > 1) {
-          currentLevel--;
-          loadLevel(currentLevel);
-        }
-      }
-      if (e.key === 'm' || e.key === 'M') {
-        if (levels[currentLevel + 1]) {
-          currentLevel++;
-          loadLevel(currentLevel);
-        }
-      }
       if ((e.key === ' ' || e.key === 'ArrowUp') && player.grounded) {
         player.vy = player.jumpForce;
         player.grounded = false;
